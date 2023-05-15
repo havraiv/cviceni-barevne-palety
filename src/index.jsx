@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 import { palettes } from './palettes.js';
-
+import { SchemeColor } from './SchemeColor/index.jsx';
 const App = () => {
   return (
     <div className="container">
@@ -18,36 +18,9 @@ const App = () => {
               alt="Mimosa Retreat"
             />
             <div className="scheme-colors">
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#583e26' }}
-              >
-                #583e26
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#a78b71' }}
-              >
-                #a78b71
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#f7c815' }}
-              >
-                #f7c815
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#ec9704' }}
-              >
-                #ec9704
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#9c4a1a' }}
-              >
-                #9c4a1a
-              </div>
+              {palettes[0].colors.map((color) => (
+                <SchemeColor color={color} />
+              ))}
             </div>
           </div>
           <div className="palette-info">
@@ -78,36 +51,9 @@ const App = () => {
               alt="Ocean Waves"
             />
             <div className="scheme-colors">
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#012e4a' }}
-              >
-                #012e4a
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#036280' }}
-              >
-                #036280
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#378ba4' }}
-              >
-                #378ba4
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#81bece' }}
-              >
-                #81bece
-              </div>
-              <div
-                className="scheme-color"
-                style={{ backgroundColor: '#e8ede7' }}
-              >
-                #e8ede7
-              </div>
+              {palettes[1].colors.map((color) => (
+                <SchemeColor color={color} />
+              ))}
             </div>
           </div>
           <div className="palette-info">
