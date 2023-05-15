@@ -10,9 +10,9 @@ const App = () => {
         <h1>Barevné palety</h1>
       </header>
       <main>
-        {palettes.map((color, index) => (
+        {palettes.map((color) => (
           <Palette
-            key={index}
+            key={color.name}
             name={color.name}
             image={color.image}
             attName={color.attribution.name}
